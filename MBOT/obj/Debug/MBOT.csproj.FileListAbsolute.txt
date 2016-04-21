@@ -1,0 +1,9 @@
+c:\users\muniz\documents\visual studio 2013\Projects\MBOT\MBOT\bin\Debug\MBOT.exe.config
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\bin\Debug\MBOT.exe.config
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\bin\Debug\MBOT.exe
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\bin\Debug\MBOT.pdb
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\obj\Debug\MBOT.csprojResolveAssemblyReference.cache
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\obj\Debug\MBOT.Properties.Resources.resources
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\obj\Debug\MBOT.csproj.GenerateResource.Cache
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\obj\Debug\MBOT.exe
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBOT\obj\Debug\MBOT.pdb
