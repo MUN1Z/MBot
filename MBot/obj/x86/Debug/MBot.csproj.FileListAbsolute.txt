@@ -21,3 +21,4 @@ C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\WindowsFormsApplica
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csproj.GenerateResource.Cache
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.exe
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.pdb
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csprojResolveAssemblyReference.cache

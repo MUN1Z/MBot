@@ -41,16 +41,19 @@
             this.gbHeal = new System.Windows.Forms.GroupBox();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
+            this.chkRaioX = new System.Windows.Forms.CheckBox();
+            this.chkLuzTotal = new System.Windows.Forms.CheckBox();
+            this.btnOutfitDeamon = new System.Windows.Forms.Button();
+            this.btnOutfitWizard = new System.Windows.Forms.Button();
+            this.btnComerCarne = new System.Windows.Forms.Button();
+            this.btnEnviarMenssagem = new System.Windows.Forms.Button();
             this.btnVirarBaixo = new System.Windows.Forms.Button();
             this.btnAndarCima = new System.Windows.Forms.Button();
             this.btnEspiarClear = new System.Windows.Forms.Button();
             this.btnEspiarBaixo = new System.Windows.Forms.Button();
             this.btnEspiarCima = new System.Windows.Forms.Button();
             this.tabSelect = new System.Windows.Forms.TabControl();
-            this.btnEnviarMenssagem = new System.Windows.Forms.Button();
-            this.btnComerCarne = new System.Windows.Forms.Button();
-            this.btnOutfitWizard = new System.Windows.Forms.Button();
-            this.btnOutfitDeamon = new System.Windows.Forms.Button();
+            this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -196,6 +199,9 @@
             // 
             // gbBasicf
             // 
+            this.gbBasicf.Controls.Add(this.chkEsconderArvores);
+            this.gbBasicf.Controls.Add(this.chkRaioX);
+            this.gbBasicf.Controls.Add(this.chkLuzTotal);
             this.gbBasicf.Controls.Add(this.btnOutfitDeamon);
             this.gbBasicf.Controls.Add(this.btnOutfitWizard);
             this.gbBasicf.Controls.Add(this.btnComerCarne);
@@ -212,6 +218,68 @@
             this.gbBasicf.TabStop = false;
             this.gbBasicf.Text = "Basico";
             this.gbBasicf.Enter += new System.EventHandler(this.gbBasicf_Enter);
+            // 
+            // chkRaioX
+            // 
+            this.chkRaioX.AutoSize = true;
+            this.chkRaioX.Location = new System.Drawing.Point(218, 44);
+            this.chkRaioX.Name = "chkRaioX";
+            this.chkRaioX.Size = new System.Drawing.Size(56, 17);
+            this.chkRaioX.TabIndex = 10;
+            this.chkRaioX.Text = "Raio x";
+            this.chkRaioX.UseVisualStyleBackColor = true;
+            this.chkRaioX.CheckedChanged += new System.EventHandler(this.chkRaioX_CheckedChanged);
+            // 
+            // chkLuzTotal
+            // 
+            this.chkLuzTotal.AutoSize = true;
+            this.chkLuzTotal.Location = new System.Drawing.Point(218, 20);
+            this.chkLuzTotal.Name = "chkLuzTotal";
+            this.chkLuzTotal.Size = new System.Drawing.Size(70, 17);
+            this.chkLuzTotal.TabIndex = 9;
+            this.chkLuzTotal.Text = "Luz Total";
+            this.chkLuzTotal.UseVisualStyleBackColor = true;
+            this.chkLuzTotal.CheckedChanged += new System.EventHandler(this.chkLuzTotal_CheckedChanged);
+            // 
+            // btnOutfitDeamon
+            // 
+            this.btnOutfitDeamon.Location = new System.Drawing.Point(108, 38);
+            this.btnOutfitDeamon.Name = "btnOutfitDeamon";
+            this.btnOutfitDeamon.Size = new System.Drawing.Size(104, 23);
+            this.btnOutfitDeamon.TabIndex = 8;
+            this.btnOutfitDeamon.Text = "Outfit Demon";
+            this.btnOutfitDeamon.UseVisualStyleBackColor = true;
+            this.btnOutfitDeamon.Click += new System.EventHandler(this.btnOutfitDeamon_Click);
+            // 
+            // btnOutfitWizard
+            // 
+            this.btnOutfitWizard.Location = new System.Drawing.Point(108, 14);
+            this.btnOutfitWizard.Name = "btnOutfitWizard";
+            this.btnOutfitWizard.Size = new System.Drawing.Size(104, 23);
+            this.btnOutfitWizard.TabIndex = 7;
+            this.btnOutfitWizard.Text = "Outfit Wizard";
+            this.btnOutfitWizard.UseVisualStyleBackColor = true;
+            this.btnOutfitWizard.Click += new System.EventHandler(this.btnMudarOutfit_Click);
+            // 
+            // btnComerCarne
+            // 
+            this.btnComerCarne.Location = new System.Drawing.Point(3, 158);
+            this.btnComerCarne.Name = "btnComerCarne";
+            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
+            this.btnComerCarne.TabIndex = 6;
+            this.btnComerCarne.Text = "Comer carne";
+            this.btnComerCarne.UseVisualStyleBackColor = true;
+            this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
+            // 
+            // btnEnviarMenssagem
+            // 
+            this.btnEnviarMenssagem.Location = new System.Drawing.Point(3, 134);
+            this.btnEnviarMenssagem.Name = "btnEnviarMenssagem";
+            this.btnEnviarMenssagem.Size = new System.Drawing.Size(104, 23);
+            this.btnEnviarMenssagem.TabIndex = 5;
+            this.btnEnviarMenssagem.Text = "Enviar menssagem";
+            this.btnEnviarMenssagem.UseVisualStyleBackColor = true;
+            this.btnEnviarMenssagem.Click += new System.EventHandler(this.btnEnviarMenssagem_Click);
             // 
             // btnVirarBaixo
             // 
@@ -277,45 +345,16 @@
             this.tabSelect.Size = new System.Drawing.Size(345, 234);
             this.tabSelect.TabIndex = 2;
             // 
-            // btnEnviarMenssagem
+            // chkEsconderArvores
             // 
-            this.btnEnviarMenssagem.Location = new System.Drawing.Point(3, 134);
-            this.btnEnviarMenssagem.Name = "btnEnviarMenssagem";
-            this.btnEnviarMenssagem.Size = new System.Drawing.Size(104, 23);
-            this.btnEnviarMenssagem.TabIndex = 5;
-            this.btnEnviarMenssagem.Text = "Enviar menssagem";
-            this.btnEnviarMenssagem.UseVisualStyleBackColor = true;
-            this.btnEnviarMenssagem.Click += new System.EventHandler(this.btnEnviarMenssagem_Click);
-            // 
-            // btnComerCarne
-            // 
-            this.btnComerCarne.Location = new System.Drawing.Point(3, 158);
-            this.btnComerCarne.Name = "btnComerCarne";
-            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
-            this.btnComerCarne.TabIndex = 6;
-            this.btnComerCarne.Text = "Comer carne";
-            this.btnComerCarne.UseVisualStyleBackColor = true;
-            this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
-            // 
-            // btnOutfitWizard
-            // 
-            this.btnOutfitWizard.Location = new System.Drawing.Point(108, 14);
-            this.btnOutfitWizard.Name = "btnOutfitWizard";
-            this.btnOutfitWizard.Size = new System.Drawing.Size(104, 23);
-            this.btnOutfitWizard.TabIndex = 7;
-            this.btnOutfitWizard.Text = "Outfit Wizard";
-            this.btnOutfitWizard.UseVisualStyleBackColor = true;
-            this.btnOutfitWizard.Click += new System.EventHandler(this.btnMudarOutfit_Click);
-            // 
-            // btnOutfitDeamon
-            // 
-            this.btnOutfitDeamon.Location = new System.Drawing.Point(213, 14);
-            this.btnOutfitDeamon.Name = "btnOutfitDeamon";
-            this.btnOutfitDeamon.Size = new System.Drawing.Size(104, 23);
-            this.btnOutfitDeamon.TabIndex = 8;
-            this.btnOutfitDeamon.Text = "Outfit Demon";
-            this.btnOutfitDeamon.UseVisualStyleBackColor = true;
-            this.btnOutfitDeamon.Click += new System.EventHandler(this.btnOutfitDeamon_Click);
+            this.chkEsconderArvores.AutoSize = true;
+            this.chkEsconderArvores.Location = new System.Drawing.Point(218, 68);
+            this.chkEsconderArvores.Name = "chkEsconderArvores";
+            this.chkEsconderArvores.Size = new System.Drawing.Size(110, 17);
+            this.chkEsconderArvores.TabIndex = 11;
+            this.chkEsconderArvores.Text = "Esconder Arvores";
+            this.chkEsconderArvores.UseVisualStyleBackColor = true;
+            this.chkEsconderArvores.CheckedChanged += new System.EventHandler(this.chkEsconderArvores_CheckedChanged);
             // 
             // mBot
             // 
@@ -336,6 +375,7 @@
             this.tabHeal.ResumeLayout(false);
             this.tabBasics.ResumeLayout(false);
             this.gbBasicf.ResumeLayout(false);
+            this.gbBasicf.PerformLayout();
             this.tabSelect.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -366,6 +406,9 @@
         private System.Windows.Forms.Button btnComerCarne;
         private System.Windows.Forms.Button btnOutfitWizard;
         private System.Windows.Forms.Button btnOutfitDeamon;
+        private System.Windows.Forms.CheckBox chkLuzTotal;
+        private System.Windows.Forms.CheckBox chkRaioX;
+        private System.Windows.Forms.CheckBox chkEsconderArvores;
     }
 }
 

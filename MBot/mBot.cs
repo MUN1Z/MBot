@@ -127,5 +127,35 @@ namespace WindowsFormsApplication1
             p.OutfitType = OutfitType.Demon;
            
         }
+
+        private void chkLuzTotal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkLuzTotal.Checked == true)
+            {
+                c.Map.FullLightOn();
+            }
+            else {
+                c.Map.FullLightOff();
+            }
+        }
+
+        private void chkRaioX_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkRaioX.Checked == true) {
+                c.Map.NameSpyOn();
+            }
+            else
+            {
+                c.Map.NameSpyOff();
+            }
+        }
+
+        private void chkEsconderArvores_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEsconderArvores.Checked == true)
+            {
+                c.Map.ReplaceTrees();
+            }
+        }
     }
 }
