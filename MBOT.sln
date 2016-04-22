@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBOT", "MBOT\MBOT.csproj", "{7BC63A4A-A016-429C-AEEB-77077B92211E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBot", "MBot\MBot.csproj", "{CEC3DEEF-1978-40C1-B199-4FC34B9A5E91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BC63A4A-A016-429C-AEEB-77077B92211E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BC63A4A-A016-429C-AEEB-77077B92211E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BC63A4A-A016-429C-AEEB-77077B92211E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BC63A4A-A016-429C-AEEB-77077B92211E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC3DEEF-1978-40C1-B199-4FC34B9A5E91}.Debug|x86.ActiveCfg = Debug|x86
+		{CEC3DEEF-1978-40C1-B199-4FC34B9A5E91}.Debug|x86.Build.0 = Debug|x86
+		{CEC3DEEF-1978-40C1-B199-4FC34B9A5E91}.Release|x86.ActiveCfg = Release|x86
+		{CEC3DEEF-1978-40C1-B199-4FC34B9A5E91}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
