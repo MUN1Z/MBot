@@ -95,5 +95,15 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void btnAndarCima_Click(object sender, EventArgs e)
+        {
+            p.Walk(Direction.Up);
+        }
+
+        private void btnVirarBaixo_Click(object sender, EventArgs e)
+        {
+            p.Turn(Direction.Down);
+        }
     }
 }

@@ -45,6 +45,8 @@
             this.btnEspiarBaixo = new System.Windows.Forms.Button();
             this.btnEspiarCima = new System.Windows.Forms.Button();
             this.tabSelect = new System.Windows.Forms.TabControl();
+            this.btnAndarCima = new System.Windows.Forms.Button();
+            this.btnVirarBaixo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -190,6 +192,8 @@
             // 
             // gbBasicf
             // 
+            this.gbBasicf.Controls.Add(this.btnVirarBaixo);
+            this.gbBasicf.Controls.Add(this.btnAndarCima);
             this.gbBasicf.Controls.Add(this.btnEspiarClear);
             this.gbBasicf.Controls.Add(this.btnEspiarBaixo);
             this.gbBasicf.Controls.Add(this.btnEspiarCima);
@@ -245,6 +249,26 @@
             this.tabSelect.Size = new System.Drawing.Size(345, 234);
             this.tabSelect.TabIndex = 2;
             // 
+            // btnAndarCima
+            // 
+            this.btnAndarCima.Location = new System.Drawing.Point(7, 108);
+            this.btnAndarCima.Name = "btnAndarCima";
+            this.btnAndarCima.Size = new System.Drawing.Size(104, 23);
+            this.btnAndarCima.TabIndex = 3;
+            this.btnAndarCima.Text = "Andar para cima";
+            this.btnAndarCima.UseVisualStyleBackColor = true;
+            this.btnAndarCima.Click += new System.EventHandler(this.btnAndarCima_Click);
+            // 
+            // btnVirarBaixo
+            // 
+            this.btnVirarBaixo.Location = new System.Drawing.Point(7, 137);
+            this.btnVirarBaixo.Name = "btnVirarBaixo";
+            this.btnVirarBaixo.Size = new System.Drawing.Size(104, 23);
+            this.btnVirarBaixo.TabIndex = 4;
+            this.btnVirarBaixo.Text = "Virar para baixo";
+            this.btnVirarBaixo.UseVisualStyleBackColor = true;
+            this.btnVirarBaixo.Click += new System.EventHandler(this.btnVirarBaixo_Click);
+            // 
             // mBot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +312,8 @@
         private System.Windows.Forms.Button btnEspiarClear;
         private System.Windows.Forms.Button btnEspiarBaixo;
         private System.Windows.Forms.Button btnEspiarCima;
+        private System.Windows.Forms.Button btnVirarBaixo;
+        private System.Windows.Forms.Button btnAndarCima;
     }
 }
 
