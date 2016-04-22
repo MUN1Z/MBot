@@ -41,12 +41,14 @@
             this.gbHeal = new System.Windows.Forms.GroupBox();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
+            this.btnVirarBaixo = new System.Windows.Forms.Button();
+            this.btnAndarCima = new System.Windows.Forms.Button();
             this.btnEspiarClear = new System.Windows.Forms.Button();
             this.btnEspiarBaixo = new System.Windows.Forms.Button();
             this.btnEspiarCima = new System.Windows.Forms.Button();
             this.tabSelect = new System.Windows.Forms.TabControl();
-            this.btnAndarCima = new System.Windows.Forms.Button();
-            this.btnVirarBaixo = new System.Windows.Forms.Button();
+            this.btnEnviarMenssagem = new System.Windows.Forms.Button();
+            this.btnComerCarne = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -192,6 +194,8 @@
             // 
             // gbBasicf
             // 
+            this.gbBasicf.Controls.Add(this.btnComerCarne);
+            this.gbBasicf.Controls.Add(this.btnEnviarMenssagem);
             this.gbBasicf.Controls.Add(this.btnVirarBaixo);
             this.gbBasicf.Controls.Add(this.btnAndarCima);
             this.gbBasicf.Controls.Add(this.btnEspiarClear);
@@ -205,9 +209,29 @@
             this.gbBasicf.Text = "Basico";
             this.gbBasicf.Enter += new System.EventHandler(this.gbBasicf_Enter);
             // 
+            // btnVirarBaixo
+            // 
+            this.btnVirarBaixo.Location = new System.Drawing.Point(7, 110);
+            this.btnVirarBaixo.Name = "btnVirarBaixo";
+            this.btnVirarBaixo.Size = new System.Drawing.Size(104, 23);
+            this.btnVirarBaixo.TabIndex = 4;
+            this.btnVirarBaixo.Text = "Virar para baixo";
+            this.btnVirarBaixo.UseVisualStyleBackColor = true;
+            this.btnVirarBaixo.Click += new System.EventHandler(this.btnVirarBaixo_Click);
+            // 
+            // btnAndarCima
+            // 
+            this.btnAndarCima.Location = new System.Drawing.Point(7, 86);
+            this.btnAndarCima.Name = "btnAndarCima";
+            this.btnAndarCima.Size = new System.Drawing.Size(104, 23);
+            this.btnAndarCima.TabIndex = 3;
+            this.btnAndarCima.Text = "Andar para cima";
+            this.btnAndarCima.UseVisualStyleBackColor = true;
+            this.btnAndarCima.Click += new System.EventHandler(this.btnAndarCima_Click);
+            // 
             // btnEspiarClear
             // 
-            this.btnEspiarClear.Location = new System.Drawing.Point(7, 78);
+            this.btnEspiarClear.Location = new System.Drawing.Point(7, 62);
             this.btnEspiarClear.Name = "btnEspiarClear";
             this.btnEspiarClear.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarClear.TabIndex = 2;
@@ -217,7 +241,7 @@
             // 
             // btnEspiarBaixo
             // 
-            this.btnEspiarBaixo.Location = new System.Drawing.Point(7, 49);
+            this.btnEspiarBaixo.Location = new System.Drawing.Point(7, 38);
             this.btnEspiarBaixo.Name = "btnEspiarBaixo";
             this.btnEspiarBaixo.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarBaixo.TabIndex = 1;
@@ -227,7 +251,7 @@
             // 
             // btnEspiarCima
             // 
-            this.btnEspiarCima.Location = new System.Drawing.Point(7, 20);
+            this.btnEspiarCima.Location = new System.Drawing.Point(7, 14);
             this.btnEspiarCima.Name = "btnEspiarCima";
             this.btnEspiarCima.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarCima.TabIndex = 0;
@@ -249,25 +273,25 @@
             this.tabSelect.Size = new System.Drawing.Size(345, 234);
             this.tabSelect.TabIndex = 2;
             // 
-            // btnAndarCima
+            // btnEnviarMenssagem
             // 
-            this.btnAndarCima.Location = new System.Drawing.Point(7, 108);
-            this.btnAndarCima.Name = "btnAndarCima";
-            this.btnAndarCima.Size = new System.Drawing.Size(104, 23);
-            this.btnAndarCima.TabIndex = 3;
-            this.btnAndarCima.Text = "Andar para cima";
-            this.btnAndarCima.UseVisualStyleBackColor = true;
-            this.btnAndarCima.Click += new System.EventHandler(this.btnAndarCima_Click);
+            this.btnEnviarMenssagem.Location = new System.Drawing.Point(7, 134);
+            this.btnEnviarMenssagem.Name = "btnEnviarMenssagem";
+            this.btnEnviarMenssagem.Size = new System.Drawing.Size(104, 23);
+            this.btnEnviarMenssagem.TabIndex = 5;
+            this.btnEnviarMenssagem.Text = "Enviar menssagem";
+            this.btnEnviarMenssagem.UseVisualStyleBackColor = true;
+            this.btnEnviarMenssagem.Click += new System.EventHandler(this.btnEnviarMenssagem_Click);
             // 
-            // btnVirarBaixo
+            // btnComerCarne
             // 
-            this.btnVirarBaixo.Location = new System.Drawing.Point(7, 137);
-            this.btnVirarBaixo.Name = "btnVirarBaixo";
-            this.btnVirarBaixo.Size = new System.Drawing.Size(104, 23);
-            this.btnVirarBaixo.TabIndex = 4;
-            this.btnVirarBaixo.Text = "Virar para baixo";
-            this.btnVirarBaixo.UseVisualStyleBackColor = true;
-            this.btnVirarBaixo.Click += new System.EventHandler(this.btnVirarBaixo_Click);
+            this.btnComerCarne.Location = new System.Drawing.Point(7, 159);
+            this.btnComerCarne.Name = "btnComerCarne";
+            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
+            this.btnComerCarne.TabIndex = 6;
+            this.btnComerCarne.Text = "Comer carne";
+            this.btnComerCarne.UseVisualStyleBackColor = true;
+            this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
             // 
             // mBot
             // 
@@ -314,6 +338,8 @@
         private System.Windows.Forms.Button btnEspiarCima;
         private System.Windows.Forms.Button btnVirarBaixo;
         private System.Windows.Forms.Button btnAndarCima;
+        private System.Windows.Forms.Button btnEnviarMenssagem;
+        private System.Windows.Forms.Button btnComerCarne;
     }
 }
 

@@ -105,5 +105,15 @@ namespace WindowsFormsApplication1
         {
             p.Turn(Direction.Down);
         }
+
+        private void btnEnviarMenssagem_Click(object sender, EventArgs e)
+        {
+            c.Console.Say("exura");
+        }
+
+        private void btnComerCarne_Click(object sender, EventArgs e)
+        {
+            c.Inventory.UseItem(Items.Food.Ham.Id);
+        }
     }
 }
