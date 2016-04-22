@@ -10,15 +10,15 @@ C:\Users\MUNIZ\Desktop\elvenbot\trunk - Cópia (2)\MBot\obj\x86\Debug\WindowsFor
 C:\Users\MUNIZ\Desktop\elvenbot\trunk - Cópia (2)\MBot\obj\x86\Debug\MBot.csproj.GenerateResource.Cache
 C:\Users\MUNIZ\Desktop\elvenbot\trunk - Cópia (2)\MBot\obj\x86\Debug\MBot.exe
 C:\Users\MUNIZ\Desktop\elvenbot\trunk - Cópia (2)\MBot\obj\x86\Debug\MBot.pdb
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.Properties.Resources.resources
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csproj.GenerateResource.Cache
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\MBot.exe.config
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\MBot.exe
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\MBot.pdb
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\KedrahCore.dll
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\TibiaAPI.dll
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\TibiaAPI.pdb
-C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\WindowsFormsApplication1.mBot.resources
-C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csproj.GenerateResource.Cache
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.exe
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.pdb
+C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.mBot.resources
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csprojResolveAssemblyReference.cache

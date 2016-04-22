@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace MBot
 {
     partial class mBot
     {
@@ -76,7 +76,7 @@
             // 
             // btnTrainer
             // 
-            this.btnTrainer.Image = global::WindowsFormsApplication1.Properties.Resources.img_trainer;
+            this.btnTrainer.Image = global::MBot.Properties.Resources.img_trainer;
             this.btnTrainer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrainer.Location = new System.Drawing.Point(260, 18);
             this.btnTrainer.Name = "btnTrainer";
@@ -89,7 +89,7 @@
             // 
             // btnMana
             // 
-            this.btnMana.Image = global::WindowsFormsApplication1.Properties.Resources.img_mana;
+            this.btnMana.Image = global::MBot.Properties.Resources.img_mana;
             this.btnMana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMana.Location = new System.Drawing.Point(175, 18);
             this.btnMana.Name = "btnMana";
@@ -102,7 +102,7 @@
             // 
             // btnCura
             // 
-            this.btnCura.Image = global::WindowsFormsApplication1.Properties.Resources.img_heal;
+            this.btnCura.Image = global::MBot.Properties.Resources.img_heal;
             this.btnCura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCura.Location = new System.Drawing.Point(90, 18);
             this.btnCura.Name = "btnCura";
@@ -115,7 +115,7 @@
             // 
             // btnBasico
             // 
-            this.btnBasico.Image = global::WindowsFormsApplication1.Properties.Resources.img_basics;
+            this.btnBasico.Image = global::MBot.Properties.Resources.img_basics;
             this.btnBasico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBasico.Location = new System.Drawing.Point(5, 17);
             this.btnBasico.Name = "btnBasico";

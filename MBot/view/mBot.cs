@@ -19,7 +19,9 @@ using Tibia.Util;
 using Tibia.Objects;
 using Tibia.Constants;
 
-namespace WindowsFormsApplication1
+using MBot.model;
+
+namespace MBot
 {
     public partial class mBot : Form
     {
@@ -32,22 +34,24 @@ namespace WindowsFormsApplication1
 
 
         private Tibia.Objects.Console console;
-        Client c;
-        Player p;
+
+        Client cliente;
+        Player player;
+
         private void mBot_Load(object sender, EventArgs e)
         {
-            c = ClientChooser.ShowBox();
-            if (c == null || !c.LoggedIn)
+            cliente = ClientChooser.ShowBox();
+            if (cliente == null || !cliente.LoggedIn)
             {
                 MessageBox.Show("Você deve ter pelo menos um cliente aberto e conectado.");
                 Application.Exit();
             }
             else
             {
-                p = c.GetPlayer();
-                this.Text = "MBot - " + p.Name + " (" + p.WorldName + ")";
-                c.Statusbar = "MBot: Injetado com sucesso.";
-                console = new Tibia.Objects.Console(c);
+                player = cliente.GetPlayer();
+                this.Text = "MBot - " + player.Name + " (" + player.WorldName + ")";
+                cliente.Statusbar = "MBot: Injetado com sucesso.";
+                console = new Tibia.Objects.Console(cliente);
             }
         }
 
@@ -73,17 +77,17 @@ namespace WindowsFormsApplication1
 
         private void btnEspiarCima_Click(object sender, EventArgs e)
         {
-            c.Map.LevelSpyOn(1);
+            cliente.Map.LevelSpyOn(1);
         }
 
         private void btnEspiarBaixo_Click(object sender, EventArgs e)
         {
-            c.Map.LevelSpyOn(-1);
+            cliente.Map.LevelSpyOn(-1);
         }
 
         private void btnEspiarClear_Click(object sender, EventArgs e)
         {
-            c.Map.LevelSpyOff();
+            cliente.Map.LevelSpyOff();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -98,64 +102,49 @@ namespace WindowsFormsApplication1
 
         private void btnAndarCima_Click(object sender, EventArgs e)
         {
-            p.Walk(Direction.Up);
+            player.Walk(Direction.Up);
         }
 
         private void btnVirarBaixo_Click(object sender, EventArgs e)
         {
-            p.Turn(Direction.Down);
+            player.Turn(Direction.Down);
         }
 
         private void btnEnviarMenssagem_Click(object sender, EventArgs e)
         {
-            c.Console.Say("exura");
+            cliente.Console.Say("exura");
         }
 
         private void btnComerCarne_Click(object sender, EventArgs e)
         {
-            c.Inventory.UseItem(Items.Food.Ham.Id);
+            cliente.Inventory.UseItem(Items.Food.Ham.Id);
         }
 
         private void btnMudarOutfit_Click(object sender, EventArgs e)
         {
-            p.OutfitType = OutfitType.WizardMale;
+            player.OutfitType = OutfitType.WizardMale;
             
         }
 
         private void btnOutfitDeamon_Click(object sender, EventArgs e)
         {
-            p.OutfitType = OutfitType.Demon;
+            player.OutfitType = OutfitType.Demon;
            
         }
 
         private void chkLuzTotal_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkLuzTotal.Checked == true)
-            {
-                c.Map.FullLightOn();
-            }
-            else {
-                c.Map.FullLightOff();
-            }
+            Basico.getLuzTotal(cliente, chkLuzTotal);
         }
 
         private void chkRaioX_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkRaioX.Checked == true) {
-                c.Map.NameSpyOn();
-            }
-            else
-            {
-                c.Map.NameSpyOff();
-            }
+            Basico.getEspionarNome(cliente, chkRaioX);
         }
 
         private void chkEsconderArvores_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkEsconderArvores.Checked == true)
-            {
-                c.Map.ReplaceTrees();
-            }
+            Basico.getEsconderArvores(cliente, chkEsconderArvores);
         }
     }
 }
