@@ -16,7 +16,6 @@ C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\MBot.pdb
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\KedrahCore.dll
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\TibiaAPI.dll
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\bin\Debug\TibiaAPI.pdb
-C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csprojResolveAssemblyReference.cache
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\WindowsFormsApplication1.mBot.resources
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\MUNIZ\Documents\ProjetosGit\MBot\MBot\obj\x86\Debug\MBot.csproj.GenerateResource.Cache

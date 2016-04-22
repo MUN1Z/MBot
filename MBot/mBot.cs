@@ -115,5 +115,17 @@ namespace WindowsFormsApplication1
         {
             c.Inventory.UseItem(Items.Food.Ham.Id);
         }
+
+        private void btnMudarOutfit_Click(object sender, EventArgs e)
+        {
+            p.OutfitType = OutfitType.WizardMale;
+            
+        }
+
+        private void btnOutfitDeamon_Click(object sender, EventArgs e)
+        {
+            p.OutfitType = OutfitType.Demon;
+           
+        }
     }
 }

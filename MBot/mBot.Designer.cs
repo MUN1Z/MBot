@@ -49,6 +49,8 @@
             this.tabSelect = new System.Windows.Forms.TabControl();
             this.btnEnviarMenssagem = new System.Windows.Forms.Button();
             this.btnComerCarne = new System.Windows.Forms.Button();
+            this.btnOutfitWizard = new System.Windows.Forms.Button();
+            this.btnOutfitDeamon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -194,6 +196,8 @@
             // 
             // gbBasicf
             // 
+            this.gbBasicf.Controls.Add(this.btnOutfitDeamon);
+            this.gbBasicf.Controls.Add(this.btnOutfitWizard);
             this.gbBasicf.Controls.Add(this.btnComerCarne);
             this.gbBasicf.Controls.Add(this.btnEnviarMenssagem);
             this.gbBasicf.Controls.Add(this.btnVirarBaixo);
@@ -211,7 +215,7 @@
             // 
             // btnVirarBaixo
             // 
-            this.btnVirarBaixo.Location = new System.Drawing.Point(7, 110);
+            this.btnVirarBaixo.Location = new System.Drawing.Point(3, 110);
             this.btnVirarBaixo.Name = "btnVirarBaixo";
             this.btnVirarBaixo.Size = new System.Drawing.Size(104, 23);
             this.btnVirarBaixo.TabIndex = 4;
@@ -221,7 +225,7 @@
             // 
             // btnAndarCima
             // 
-            this.btnAndarCima.Location = new System.Drawing.Point(7, 86);
+            this.btnAndarCima.Location = new System.Drawing.Point(3, 86);
             this.btnAndarCima.Name = "btnAndarCima";
             this.btnAndarCima.Size = new System.Drawing.Size(104, 23);
             this.btnAndarCima.TabIndex = 3;
@@ -231,7 +235,7 @@
             // 
             // btnEspiarClear
             // 
-            this.btnEspiarClear.Location = new System.Drawing.Point(7, 62);
+            this.btnEspiarClear.Location = new System.Drawing.Point(3, 62);
             this.btnEspiarClear.Name = "btnEspiarClear";
             this.btnEspiarClear.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarClear.TabIndex = 2;
@@ -241,7 +245,7 @@
             // 
             // btnEspiarBaixo
             // 
-            this.btnEspiarBaixo.Location = new System.Drawing.Point(7, 38);
+            this.btnEspiarBaixo.Location = new System.Drawing.Point(3, 38);
             this.btnEspiarBaixo.Name = "btnEspiarBaixo";
             this.btnEspiarBaixo.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarBaixo.TabIndex = 1;
@@ -251,7 +255,7 @@
             // 
             // btnEspiarCima
             // 
-            this.btnEspiarCima.Location = new System.Drawing.Point(7, 14);
+            this.btnEspiarCima.Location = new System.Drawing.Point(3, 14);
             this.btnEspiarCima.Name = "btnEspiarCima";
             this.btnEspiarCima.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarCima.TabIndex = 0;
@@ -275,7 +279,7 @@
             // 
             // btnEnviarMenssagem
             // 
-            this.btnEnviarMenssagem.Location = new System.Drawing.Point(7, 134);
+            this.btnEnviarMenssagem.Location = new System.Drawing.Point(3, 134);
             this.btnEnviarMenssagem.Name = "btnEnviarMenssagem";
             this.btnEnviarMenssagem.Size = new System.Drawing.Size(104, 23);
             this.btnEnviarMenssagem.TabIndex = 5;
@@ -285,13 +289,33 @@
             // 
             // btnComerCarne
             // 
-            this.btnComerCarne.Location = new System.Drawing.Point(7, 159);
+            this.btnComerCarne.Location = new System.Drawing.Point(3, 158);
             this.btnComerCarne.Name = "btnComerCarne";
             this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
             this.btnComerCarne.TabIndex = 6;
             this.btnComerCarne.Text = "Comer carne";
             this.btnComerCarne.UseVisualStyleBackColor = true;
             this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
+            // 
+            // btnOutfitWizard
+            // 
+            this.btnOutfitWizard.Location = new System.Drawing.Point(108, 14);
+            this.btnOutfitWizard.Name = "btnOutfitWizard";
+            this.btnOutfitWizard.Size = new System.Drawing.Size(104, 23);
+            this.btnOutfitWizard.TabIndex = 7;
+            this.btnOutfitWizard.Text = "Outfit Wizard";
+            this.btnOutfitWizard.UseVisualStyleBackColor = true;
+            this.btnOutfitWizard.Click += new System.EventHandler(this.btnMudarOutfit_Click);
+            // 
+            // btnOutfitDeamon
+            // 
+            this.btnOutfitDeamon.Location = new System.Drawing.Point(213, 14);
+            this.btnOutfitDeamon.Name = "btnOutfitDeamon";
+            this.btnOutfitDeamon.Size = new System.Drawing.Size(104, 23);
+            this.btnOutfitDeamon.TabIndex = 8;
+            this.btnOutfitDeamon.Text = "Outfit Demon";
+            this.btnOutfitDeamon.UseVisualStyleBackColor = true;
+            this.btnOutfitDeamon.Click += new System.EventHandler(this.btnOutfitDeamon_Click);
             // 
             // mBot
             // 
@@ -340,6 +364,8 @@
         private System.Windows.Forms.Button btnAndarCima;
         private System.Windows.Forms.Button btnEnviarMenssagem;
         private System.Windows.Forms.Button btnComerCarne;
+        private System.Windows.Forms.Button btnOutfitWizard;
+        private System.Windows.Forms.Button btnOutfitDeamon;
     }
 }
 
