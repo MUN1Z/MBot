@@ -41,6 +41,7 @@
             this.gbHeal = new System.Windows.Forms.GroupBox();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
+            this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
             this.chkRaioX = new System.Windows.Forms.CheckBox();
             this.chkLuzTotal = new System.Windows.Forms.CheckBox();
             this.btnOutfitDeamon = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@
             this.btnEspiarBaixo = new System.Windows.Forms.Button();
             this.btnEspiarCima = new System.Windows.Forms.Button();
             this.tabSelect = new System.Windows.Forms.TabControl();
-            this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
+            this.chkAfk = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -199,6 +200,7 @@
             // 
             // gbBasicf
             // 
+            this.gbBasicf.Controls.Add(this.chkAfk);
             this.gbBasicf.Controls.Add(this.chkEsconderArvores);
             this.gbBasicf.Controls.Add(this.chkRaioX);
             this.gbBasicf.Controls.Add(this.chkLuzTotal);
@@ -218,6 +220,17 @@
             this.gbBasicf.TabStop = false;
             this.gbBasicf.Text = "Basico";
             this.gbBasicf.Enter += new System.EventHandler(this.gbBasicf_Enter);
+            // 
+            // chkEsconderArvores
+            // 
+            this.chkEsconderArvores.AutoSize = true;
+            this.chkEsconderArvores.Location = new System.Drawing.Point(218, 68);
+            this.chkEsconderArvores.Name = "chkEsconderArvores";
+            this.chkEsconderArvores.Size = new System.Drawing.Size(110, 17);
+            this.chkEsconderArvores.TabIndex = 11;
+            this.chkEsconderArvores.Text = "Esconder Arvores";
+            this.chkEsconderArvores.UseVisualStyleBackColor = true;
+            this.chkEsconderArvores.CheckedChanged += new System.EventHandler(this.chkEsconderArvores_CheckedChanged);
             // 
             // chkRaioX
             // 
@@ -267,7 +280,7 @@
             this.btnComerCarne.Name = "btnComerCarne";
             this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
             this.btnComerCarne.TabIndex = 6;
-            this.btnComerCarne.Text = "Comer carne";
+            this.btnComerCarne.Text = "Comer Queijo";
             this.btnComerCarne.UseVisualStyleBackColor = true;
             this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
             // 
@@ -345,16 +358,16 @@
             this.tabSelect.Size = new System.Drawing.Size(345, 234);
             this.tabSelect.TabIndex = 2;
             // 
-            // chkEsconderArvores
+            // chkAfk
             // 
-            this.chkEsconderArvores.AutoSize = true;
-            this.chkEsconderArvores.Location = new System.Drawing.Point(218, 68);
-            this.chkEsconderArvores.Name = "chkEsconderArvores";
-            this.chkEsconderArvores.Size = new System.Drawing.Size(110, 17);
-            this.chkEsconderArvores.TabIndex = 11;
-            this.chkEsconderArvores.Text = "Esconder Arvores";
-            this.chkEsconderArvores.UseVisualStyleBackColor = true;
-            this.chkEsconderArvores.CheckedChanged += new System.EventHandler(this.chkEsconderArvores_CheckedChanged);
+            this.chkAfk.AutoSize = true;
+            this.chkAfk.Location = new System.Drawing.Point(218, 91);
+            this.chkAfk.Name = "chkAfk";
+            this.chkAfk.Size = new System.Drawing.Size(42, 17);
+            this.chkAfk.TabIndex = 12;
+            this.chkAfk.Text = "Afk";
+            this.chkAfk.UseVisualStyleBackColor = true;
+            this.chkAfk.CheckedChanged += new System.EventHandler(this.chkAfk_CheckedChanged);
             // 
             // mBot
             // 
@@ -409,6 +422,7 @@
         private System.Windows.Forms.CheckBox chkLuzTotal;
         private System.Windows.Forms.CheckBox chkRaioX;
         private System.Windows.Forms.CheckBox chkEsconderArvores;
+        private System.Windows.Forms.CheckBox chkAfk;
     }
 }
 

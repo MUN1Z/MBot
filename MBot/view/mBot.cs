@@ -20,6 +20,7 @@ using Tibia.Objects;
 using Tibia.Constants;
 
 using MBot.model;
+using System.Timers;
 
 namespace MBot
 {
@@ -90,11 +91,6 @@ namespace MBot
             cliente.Map.LevelSpyOff();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void gbBasicf_Enter(object sender, EventArgs e)
         {
 
@@ -112,24 +108,22 @@ namespace MBot
 
         private void btnEnviarMenssagem_Click(object sender, EventArgs e)
         {
-            cliente.Console.Say("exura");
+            Basico.getEnviarMenssagem(cliente, "Exura");
         }
 
         private void btnComerCarne_Click(object sender, EventArgs e)
         {
-            cliente.Inventory.UseItem(Items.Food.Ham.Id);
+            Basico.getComerQueijo(cliente);
         }
 
         private void btnMudarOutfit_Click(object sender, EventArgs e)
         {
-            player.OutfitType = OutfitType.WizardMale;
-            
+            Basico.getMudarOutfitWizard(player);
         }
 
         private void btnOutfitDeamon_Click(object sender, EventArgs e)
         {
-            player.OutfitType = OutfitType.Demon;
-           
+            Basico.getMudarOutfitDemon(player);
         }
 
         private void chkLuzTotal_CheckedChanged(object sender, EventArgs e)
@@ -145,6 +139,36 @@ namespace MBot
         private void chkEsconderArvores_CheckedChanged(object sender, EventArgs e)
         {
             Basico.getEsconderArvores(cliente, chkEsconderArvores);
+        }
+
+        private void chkAfk_CheckedChanged(object sender, EventArgs e)
+        {
+            System.Timers.Timer aTimer = new System.Timers.Timer();
+            System.Threading.Thread.Sleep(5000);
+
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            // Set the Interval to 5 minutos.
+            aTimer.Interval = 1000;
+
+             if (chkAfk.Checked == true) {
+
+                aTimer.Enabled = true;
+
+            }else{
+
+                aTimer.Enabled = false;
+
+                player.Turn(Direction.Right);
+
+             }
+
+        }
+
+        private void OnTimedEvent(object source, ElapsedEventArgs e){
+            player.Turn(Direction.Right);
+            player.Turn(Direction.Down);
+            player.Turn(Direction.Left);
+            player.Turn(Direction.Up);
         }
     }
 }
