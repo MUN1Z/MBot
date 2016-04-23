@@ -109,6 +109,24 @@ namespace MBot.model
         {
 
         }
+
+        /// <summary>
+        /// Método responsável por colocar uma tag de black skull no player.<para/>
+        /// Recebe como argumento um Player.
+        /// </summary>
+        public static void getBlackSkull(Player player)
+        {
+            player.Skull = Skull.Black;
+        }
+
+        /// <summary>
+        /// Método responsável por não deixar que o player seja deslogado quando ficar AFK.<para/>
+        /// Recebe como argumento um Player e um CheckBox.
+        /// </summary>
+        public static void getAutoExuraOn(Player player, CheckBox check)
+        {
+
+        }
  
     }
 }

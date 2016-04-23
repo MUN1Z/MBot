@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTrainer = new System.Windows.Forms.Button();
             this.btnMana = new System.Windows.Forms.Button();
@@ -41,6 +42,10 @@
             this.gbHeal = new System.Windows.Forms.GroupBox();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
+            this.btnAutoExuraOff = new System.Windows.Forms.Button();
+            this.btnAutoExuraOn = new System.Windows.Forms.Button();
+            this.btnBlackSkull = new System.Windows.Forms.Button();
+            this.chkAfk = new System.Windows.Forms.CheckBox();
             this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
             this.chkRaioX = new System.Windows.Forms.CheckBox();
             this.chkLuzTotal = new System.Windows.Forms.CheckBox();
@@ -54,7 +59,10 @@
             this.btnEspiarBaixo = new System.Windows.Forms.Button();
             this.btnEspiarCima = new System.Windows.Forms.Button();
             this.tabSelect = new System.Windows.Forms.TabControl();
-            this.chkAfk = new System.Windows.Forms.CheckBox();
+            this.tmrExura = new System.Windows.Forms.Timer(this.components);
+            this.btnAfkOff = new System.Windows.Forms.Button();
+            this.btnAfkOn = new System.Windows.Forms.Button();
+            this.tmrAfk = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -200,6 +208,11 @@
             // 
             // gbBasicf
             // 
+            this.gbBasicf.Controls.Add(this.btnAfkOff);
+            this.gbBasicf.Controls.Add(this.btnAfkOn);
+            this.gbBasicf.Controls.Add(this.btnAutoExuraOff);
+            this.gbBasicf.Controls.Add(this.btnAutoExuraOn);
+            this.gbBasicf.Controls.Add(this.btnBlackSkull);
             this.gbBasicf.Controls.Add(this.chkAfk);
             this.gbBasicf.Controls.Add(this.chkEsconderArvores);
             this.gbBasicf.Controls.Add(this.chkRaioX);
@@ -220,6 +233,47 @@
             this.gbBasicf.TabStop = false;
             this.gbBasicf.Text = "Basico";
             this.gbBasicf.Enter += new System.EventHandler(this.gbBasicf_Enter);
+            // 
+            // btnAutoExuraOff
+            // 
+            this.btnAutoExuraOff.Location = new System.Drawing.Point(108, 110);
+            this.btnAutoExuraOff.Name = "btnAutoExuraOff";
+            this.btnAutoExuraOff.Size = new System.Drawing.Size(104, 23);
+            this.btnAutoExuraOff.TabIndex = 15;
+            this.btnAutoExuraOff.Text = "Auto Exura Off";
+            this.btnAutoExuraOff.UseVisualStyleBackColor = true;
+            this.btnAutoExuraOff.Click += new System.EventHandler(this.btnAutoExuraOff_Click);
+            // 
+            // btnAutoExuraOn
+            // 
+            this.btnAutoExuraOn.Location = new System.Drawing.Point(108, 86);
+            this.btnAutoExuraOn.Name = "btnAutoExuraOn";
+            this.btnAutoExuraOn.Size = new System.Drawing.Size(104, 23);
+            this.btnAutoExuraOn.TabIndex = 14;
+            this.btnAutoExuraOn.Text = "Auto Exura On";
+            this.btnAutoExuraOn.UseVisualStyleBackColor = true;
+            this.btnAutoExuraOn.Click += new System.EventHandler(this.btnAutoExuraOn_Click);
+            // 
+            // btnBlackSkull
+            // 
+            this.btnBlackSkull.Location = new System.Drawing.Point(108, 62);
+            this.btnBlackSkull.Name = "btnBlackSkull";
+            this.btnBlackSkull.Size = new System.Drawing.Size(104, 23);
+            this.btnBlackSkull.TabIndex = 13;
+            this.btnBlackSkull.Text = "Black Skull";
+            this.btnBlackSkull.UseVisualStyleBackColor = true;
+            this.btnBlackSkull.Click += new System.EventHandler(this.btnBlackSkull_Click);
+            // 
+            // chkAfk
+            // 
+            this.chkAfk.AutoSize = true;
+            this.chkAfk.Location = new System.Drawing.Point(218, 91);
+            this.chkAfk.Name = "chkAfk";
+            this.chkAfk.Size = new System.Drawing.Size(42, 17);
+            this.chkAfk.TabIndex = 12;
+            this.chkAfk.Text = "Afk";
+            this.chkAfk.UseVisualStyleBackColor = true;
+            this.chkAfk.CheckedChanged += new System.EventHandler(this.chkAfk_CheckedChanged);
             // 
             // chkEsconderArvores
             // 
@@ -358,16 +412,35 @@
             this.tabSelect.Size = new System.Drawing.Size(345, 234);
             this.tabSelect.TabIndex = 2;
             // 
-            // chkAfk
+            // tmrExura
             // 
-            this.chkAfk.AutoSize = true;
-            this.chkAfk.Location = new System.Drawing.Point(218, 91);
-            this.chkAfk.Name = "chkAfk";
-            this.chkAfk.Size = new System.Drawing.Size(42, 17);
-            this.chkAfk.TabIndex = 12;
-            this.chkAfk.Text = "Afk";
-            this.chkAfk.UseVisualStyleBackColor = true;
-            this.chkAfk.CheckedChanged += new System.EventHandler(this.chkAfk_CheckedChanged);
+            this.tmrExura.Interval = 200;
+            this.tmrExura.Tick += new System.EventHandler(this.tmrExura_Tick);
+            // 
+            // btnAfkOff
+            // 
+            this.btnAfkOff.Location = new System.Drawing.Point(108, 158);
+            this.btnAfkOff.Name = "btnAfkOff";
+            this.btnAfkOff.Size = new System.Drawing.Size(104, 23);
+            this.btnAfkOff.TabIndex = 17;
+            this.btnAfkOff.Text = "Afk Off";
+            this.btnAfkOff.UseVisualStyleBackColor = true;
+            this.btnAfkOff.Click += new System.EventHandler(this.btnAfkOff_Click);
+            // 
+            // btnAfkOn
+            // 
+            this.btnAfkOn.Location = new System.Drawing.Point(108, 134);
+            this.btnAfkOn.Name = "btnAfkOn";
+            this.btnAfkOn.Size = new System.Drawing.Size(104, 23);
+            this.btnAfkOn.TabIndex = 16;
+            this.btnAfkOn.Text = "Afk On";
+            this.btnAfkOn.UseVisualStyleBackColor = true;
+            this.btnAfkOn.Click += new System.EventHandler(this.btnAfkOn_Click);
+            // 
+            // tmrAfk
+            // 
+            this.tmrAfk.Interval = 10000;
+            this.tmrAfk.Tick += new System.EventHandler(this.tmrAfk_Tick);
             // 
             // mBot
             // 
@@ -423,6 +496,13 @@
         private System.Windows.Forms.CheckBox chkRaioX;
         private System.Windows.Forms.CheckBox chkEsconderArvores;
         private System.Windows.Forms.CheckBox chkAfk;
+        private System.Windows.Forms.Button btnBlackSkull;
+        private System.Windows.Forms.Button btnAutoExuraOff;
+        private System.Windows.Forms.Button btnAutoExuraOn;
+        private System.Windows.Forms.Timer tmrExura;
+        private System.Windows.Forms.Button btnAfkOff;
+        private System.Windows.Forms.Button btnAfkOn;
+        private System.Windows.Forms.Timer tmrAfk;
     }
 }
 

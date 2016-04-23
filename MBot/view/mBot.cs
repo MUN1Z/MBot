@@ -170,5 +170,46 @@ namespace MBot
             player.Turn(Direction.Left);
             player.Turn(Direction.Up);
         }
+
+        private void btnBlackSkull_Click(object sender, EventArgs e)
+        {
+            Basico.getBlackSkull(player);
+        }
+
+        private void tmrExura_Tick(object sender, EventArgs e)
+        {
+            cliente.Console.Say("Exura");
+        }
+
+        private void btnAutoExuraOn_Click(object sender, EventArgs e)
+        {
+            tmrExura.Start();
+        }
+
+        private void btnAutoExuraOff_Click(object sender, EventArgs e)
+        {
+            tmrExura.Stop();
+        }
+
+        private void tmrAfk_Tick(object sender, EventArgs e)
+        {
+            player.Turn(Direction.Right);
+            player.Turn(Direction.Left);
+        }
+
+        private void btnAfkOn_Click(object sender, EventArgs e)
+        {
+            tmrAfk.Start();
+        }
+
+        private void btnAfkOff_Click(object sender, EventArgs e)
+        {
+            tmrAfk.Stop();
+        }
+
+        
+
+
+
     }
 }
