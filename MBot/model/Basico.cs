@@ -119,14 +119,7 @@ namespace MBot.model
             player.Skull = Skull.Black;
         }
 
-        /// <summary>
-        /// Método responsável por não deixar que o player seja deslogado quando ficar AFK.<para/>
-        /// Recebe como argumento um Player e um CheckBox.
-        /// </summary>
-        public static void getAutoExuraOn(Player player, CheckBox check)
-        {
-
-        }
+        
  
     }
 }

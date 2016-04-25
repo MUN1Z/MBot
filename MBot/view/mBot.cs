@@ -178,7 +178,7 @@ namespace MBot
 
         private void tmrExura_Tick(object sender, EventArgs e)
         {
-            cliente.Console.Say("Exura");
+            Cura.getExura(cliente);
         }
 
         private void btnAutoExuraOn_Click(object sender, EventArgs e)
@@ -206,10 +206,6 @@ namespace MBot
         {
             tmrAfk.Stop();
         }
-
-        
-
-
 
     }
 }
