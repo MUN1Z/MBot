@@ -40,8 +40,6 @@
             this.gbMana = new System.Windows.Forms.GroupBox();
             this.tabHeal = new System.Windows.Forms.TabPage();
             this.gbHeal = new System.Windows.Forms.GroupBox();
-            this.btnAutoExuraOff = new System.Windows.Forms.Button();
-            this.btnAutoExuraOn = new System.Windows.Forms.Button();
             this.btnComerCarne = new System.Windows.Forms.Button();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
@@ -61,6 +59,7 @@
             this.tmrExura = new System.Windows.Forms.Timer(this.components);
             this.tmrAfk = new System.Windows.Forms.Timer(this.components);
             this.chkAfk = new System.Windows.Forms.CheckBox();
+            this.chkExura = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.gbTrainer.SuspendLayout();
@@ -78,7 +77,7 @@
             this.panel1.Controls.Add(this.btnMana);
             this.panel1.Controls.Add(this.btnCura);
             this.panel1.Controls.Add(this.btnBasico);
-            this.panel1.Location = new System.Drawing.Point(6, -33);
+            this.panel1.Location = new System.Drawing.Point(6, -15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 68);
             this.panel1.TabIndex = 1;
@@ -189,8 +188,7 @@
             // 
             // gbHeal
             // 
-            this.gbHeal.Controls.Add(this.btnAutoExuraOff);
-            this.gbHeal.Controls.Add(this.btnAutoExuraOn);
+            this.gbHeal.Controls.Add(this.chkExura);
             this.gbHeal.Controls.Add(this.btnComerCarne);
             this.gbHeal.Location = new System.Drawing.Point(6, 10);
             this.gbHeal.Name = "gbHeal";
@@ -198,24 +196,6 @@
             this.gbHeal.TabIndex = 0;
             this.gbHeal.TabStop = false;
             this.gbHeal.Text = "Restaurar Vida";
-            // 
-            // btnAutoExuraOff
-            // 
-            this.btnAutoExuraOff.Location = new System.Drawing.Point(6, 77);
-            this.btnAutoExuraOff.Name = "btnAutoExuraOff";
-            this.btnAutoExuraOff.Size = new System.Drawing.Size(104, 23);
-            this.btnAutoExuraOff.TabIndex = 18;
-            this.btnAutoExuraOff.Text = "Auto Exura Off";
-            this.btnAutoExuraOff.UseVisualStyleBackColor = true;
-            // 
-            // btnAutoExuraOn
-            // 
-            this.btnAutoExuraOn.Location = new System.Drawing.Point(6, 48);
-            this.btnAutoExuraOn.Name = "btnAutoExuraOn";
-            this.btnAutoExuraOn.Size = new System.Drawing.Size(104, 23);
-            this.btnAutoExuraOn.TabIndex = 17;
-            this.btnAutoExuraOn.Text = "Auto Exura On";
-            this.btnAutoExuraOn.UseVisualStyleBackColor = true;
             // 
             // btnComerCarne
             // 
@@ -225,6 +205,7 @@
             this.btnComerCarne.TabIndex = 16;
             this.btnComerCarne.Text = "Comer Carne";
             this.btnComerCarne.UseVisualStyleBackColor = true;
+            this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
             // 
             // tabBasics
             // 
@@ -417,6 +398,17 @@
             this.chkAfk.UseVisualStyleBackColor = true;
             this.chkAfk.CheckedChanged += new System.EventHandler(this.chkAfk_CheckedChanged_1);
             // 
+            // chkExura
+            // 
+            this.chkExura.AutoSize = true;
+            this.chkExura.Location = new System.Drawing.Point(6, 48);
+            this.chkExura.Name = "chkExura";
+            this.chkExura.Size = new System.Drawing.Size(78, 17);
+            this.chkExura.TabIndex = 17;
+            this.chkExura.Text = "Auto Exura";
+            this.chkExura.UseVisualStyleBackColor = true;
+            this.chkExura.CheckedChanged += new System.EventHandler(this.chkExura_CheckedChanged);
+            // 
             // mBot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +429,7 @@
             this.tabMana.ResumeLayout(false);
             this.tabHeal.ResumeLayout(false);
             this.gbHeal.ResumeLayout(false);
+            this.gbHeal.PerformLayout();
             this.tabBasics.ResumeLayout(false);
             this.gbBasicf.ResumeLayout(false);
             this.gbBasicf.PerformLayout();
@@ -475,10 +468,9 @@
         private System.Windows.Forms.Button btnBlackSkull;
         private System.Windows.Forms.Timer tmrExura;
         private System.Windows.Forms.Timer tmrAfk;
-        private System.Windows.Forms.Button btnAutoExuraOff;
-        private System.Windows.Forms.Button btnAutoExuraOn;
         private System.Windows.Forms.Button btnComerCarne;
         private System.Windows.Forms.CheckBox chkAfk;
+        private System.Windows.Forms.CheckBox chkExura;
     }
 }
 

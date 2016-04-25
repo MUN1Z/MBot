@@ -113,7 +113,7 @@ namespace MBot
 
         private void btnComerCarne_Click(object sender, EventArgs e)
         {
-            Basico.getComerQueijo(cliente);
+            Cura.getComerCarne(cliente);
         }
 
         private void btnMudarOutfit_Click(object sender, EventArgs e)
@@ -156,13 +156,7 @@ namespace MBot
 
         }
 
-        private void OnTimedEvent(object source, ElapsedEventArgs e){
-            player.Turn(Direction.Right);
-            player.Turn(Direction.Down);
-            player.Turn(Direction.Left);
-            player.Turn(Direction.Up);
-        }
-
+        
         private void btnBlackSkull_Click(object sender, EventArgs e)
         {
             Basico.getBlackSkull(player);
@@ -188,5 +182,22 @@ namespace MBot
             Trainer.getAfk(player);
         }
 
+        private void chkExura_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkExura.Checked == true)
+            {
+
+                tmrExura.Start();
+
+            }
+            else
+            {
+
+                tmrExura.Stop();
+
+            }
+        }
+
+        
     }
 }

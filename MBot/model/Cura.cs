@@ -30,7 +30,15 @@ namespace MBot.model
         {
             cliente.Console.Say("Exura");
         }
-       
+
+        /// <summary>
+        /// Método responsável por mudar fazer o player comer um cheese do inventário.<para/>
+        /// Recebe como argumento um Client.
+        /// </summary>
+        public static void getComerCarne(Client cliente)
+        {
+            cliente.Inventory.UseItem(Items.Food.Ham.Id);
+        }
 
     }
 

@@ -31,14 +31,6 @@ namespace MBot.model
             cliente.Console.Say(menssagem);
         }
 
-        /// <summary>
-        /// Método responsável por mudar fazer o player comer um cheese do inventário.<para/>
-        /// Recebe como argumento um Client.
-        /// </summary>
-        public static void getComerQueijo(Client cliente)
-        {
-            cliente.Inventory.UseItem(Items.Food.Cheese.Id);
-        }
 
         /// <summary>
         /// Método responsável por mudar a outfit do player para um Demon.<para/>
