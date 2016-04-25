@@ -46,7 +46,6 @@
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
             this.btnBlackSkull = new System.Windows.Forms.Button();
-            this.chkAfk = new System.Windows.Forms.CheckBox();
             this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
             this.chkRaioX = new System.Windows.Forms.CheckBox();
             this.chkLuzTotal = new System.Windows.Forms.CheckBox();
@@ -61,8 +60,10 @@
             this.tabSelect = new System.Windows.Forms.TabControl();
             this.tmrExura = new System.Windows.Forms.Timer(this.components);
             this.tmrAfk = new System.Windows.Forms.Timer(this.components);
+            this.chkAfk = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
+            this.gbTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
             this.tabHeal.SuspendLayout();
             this.gbHeal.SuspendLayout();
@@ -77,7 +78,7 @@
             this.panel1.Controls.Add(this.btnMana);
             this.panel1.Controls.Add(this.btnCura);
             this.panel1.Controls.Add(this.btnBasico);
-            this.panel1.Location = new System.Drawing.Point(6, -14);
+            this.panel1.Location = new System.Drawing.Point(6, -33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 68);
             this.panel1.TabIndex = 1;
@@ -147,6 +148,7 @@
             // 
             // gbTrainer
             // 
+            this.gbTrainer.Controls.Add(this.chkAfk);
             this.gbTrainer.Location = new System.Drawing.Point(6, 11);
             this.gbTrainer.Name = "gbTrainer";
             this.gbTrainer.Size = new System.Drawing.Size(321, 188);
@@ -221,7 +223,7 @@
             this.btnComerCarne.Name = "btnComerCarne";
             this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
             this.btnComerCarne.TabIndex = 16;
-            this.btnComerCarne.Text = "Comer Queijo";
+            this.btnComerCarne.Text = "Comer Carne";
             this.btnComerCarne.UseVisualStyleBackColor = true;
             // 
             // tabBasics
@@ -238,7 +240,6 @@
             // gbBasicf
             // 
             this.gbBasicf.Controls.Add(this.btnBlackSkull);
-            this.gbBasicf.Controls.Add(this.chkAfk);
             this.gbBasicf.Controls.Add(this.chkEsconderArvores);
             this.gbBasicf.Controls.Add(this.chkRaioX);
             this.gbBasicf.Controls.Add(this.chkLuzTotal);
@@ -267,17 +268,6 @@
             this.btnBlackSkull.Text = "Black Skull";
             this.btnBlackSkull.UseVisualStyleBackColor = true;
             this.btnBlackSkull.Click += new System.EventHandler(this.btnBlackSkull_Click);
-            // 
-            // chkAfk
-            // 
-            this.chkAfk.AutoSize = true;
-            this.chkAfk.Location = new System.Drawing.Point(218, 91);
-            this.chkAfk.Name = "chkAfk";
-            this.chkAfk.Size = new System.Drawing.Size(42, 17);
-            this.chkAfk.TabIndex = 12;
-            this.chkAfk.Text = "Afk";
-            this.chkAfk.UseVisualStyleBackColor = true;
-            this.chkAfk.CheckedChanged += new System.EventHandler(this.chkAfk_CheckedChanged);
             // 
             // chkEsconderArvores
             // 
@@ -413,8 +403,19 @@
             // 
             // tmrAfk
             // 
-            this.tmrAfk.Interval = 10000;
+            this.tmrAfk.Interval = 1000;
             this.tmrAfk.Tick += new System.EventHandler(this.tmrAfk_Tick);
+            // 
+            // chkAfk
+            // 
+            this.chkAfk.AutoSize = true;
+            this.chkAfk.Location = new System.Drawing.Point(6, 19);
+            this.chkAfk.Name = "chkAfk";
+            this.chkAfk.Size = new System.Drawing.Size(42, 17);
+            this.chkAfk.TabIndex = 13;
+            this.chkAfk.Text = "Afk";
+            this.chkAfk.UseVisualStyleBackColor = true;
+            this.chkAfk.CheckedChanged += new System.EventHandler(this.chkAfk_CheckedChanged_1);
             // 
             // mBot
             // 
@@ -431,6 +432,8 @@
             this.Load += new System.EventHandler(this.mBot_Load);
             this.panel1.ResumeLayout(false);
             this.tabTrainer.ResumeLayout(false);
+            this.gbTrainer.ResumeLayout(false);
+            this.gbTrainer.PerformLayout();
             this.tabMana.ResumeLayout(false);
             this.tabHeal.ResumeLayout(false);
             this.gbHeal.ResumeLayout(false);
@@ -469,13 +472,13 @@
         private System.Windows.Forms.CheckBox chkLuzTotal;
         private System.Windows.Forms.CheckBox chkRaioX;
         private System.Windows.Forms.CheckBox chkEsconderArvores;
-        private System.Windows.Forms.CheckBox chkAfk;
         private System.Windows.Forms.Button btnBlackSkull;
         private System.Windows.Forms.Timer tmrExura;
         private System.Windows.Forms.Timer tmrAfk;
         private System.Windows.Forms.Button btnAutoExuraOff;
         private System.Windows.Forms.Button btnAutoExuraOn;
         private System.Windows.Forms.Button btnComerCarne;
+        private System.Windows.Forms.CheckBox chkAfk;
     }
 }
 

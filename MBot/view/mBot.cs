@@ -141,7 +141,7 @@ namespace MBot
             Basico.getEsconderArvores(cliente, chkEsconderArvores);
         }
 
-        private void chkAfk_CheckedChanged(object sender, EventArgs e)
+        private void chkAfk_CheckedChanged_1(object sender, EventArgs e)
         {
            
              if (chkAfk.Checked == true) {
@@ -185,10 +185,8 @@ namespace MBot
 
         private void tmrAfk_Tick(object sender, EventArgs e)
         {
-            player.Turn(Direction.Right);
-            player.Turn(Direction.Left);
+            Trainer.getAfk(player);
         }
 
-       
     }
 }
