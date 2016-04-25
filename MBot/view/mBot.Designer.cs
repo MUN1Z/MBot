@@ -42,8 +42,8 @@
             this.gbHeal = new System.Windows.Forms.GroupBox();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
-            this.btnAutoExuraOff = new System.Windows.Forms.Button();
-            this.btnAutoExuraOn = new System.Windows.Forms.Button();
+            this.btnAfkOff = new System.Windows.Forms.Button();
+            this.btnAfkOn = new System.Windows.Forms.Button();
             this.btnBlackSkull = new System.Windows.Forms.Button();
             this.chkAfk = new System.Windows.Forms.CheckBox();
             this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
@@ -51,7 +51,6 @@
             this.chkLuzTotal = new System.Windows.Forms.CheckBox();
             this.btnOutfitDeamon = new System.Windows.Forms.Button();
             this.btnOutfitWizard = new System.Windows.Forms.Button();
-            this.btnComerCarne = new System.Windows.Forms.Button();
             this.btnEnviarMenssagem = new System.Windows.Forms.Button();
             this.btnVirarBaixo = new System.Windows.Forms.Button();
             this.btnAndarCima = new System.Windows.Forms.Button();
@@ -60,13 +59,15 @@
             this.btnEspiarCima = new System.Windows.Forms.Button();
             this.tabSelect = new System.Windows.Forms.TabControl();
             this.tmrExura = new System.Windows.Forms.Timer(this.components);
-            this.btnAfkOff = new System.Windows.Forms.Button();
-            this.btnAfkOn = new System.Windows.Forms.Button();
             this.tmrAfk = new System.Windows.Forms.Timer(this.components);
+            this.btnAutoExuraOff = new System.Windows.Forms.Button();
+            this.btnAutoExuraOn = new System.Windows.Forms.Button();
+            this.btnComerCarne = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
             this.tabHeal.SuspendLayout();
+            this.gbHeal.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.gbBasicf.SuspendLayout();
             this.tabSelect.SuspendLayout();
@@ -188,6 +189,9 @@
             // 
             // gbHeal
             // 
+            this.gbHeal.Controls.Add(this.btnAutoExuraOff);
+            this.gbHeal.Controls.Add(this.btnAutoExuraOn);
+            this.gbHeal.Controls.Add(this.btnComerCarne);
             this.gbHeal.Location = new System.Drawing.Point(6, 10);
             this.gbHeal.Name = "gbHeal";
             this.gbHeal.Size = new System.Drawing.Size(321, 188);
@@ -210,8 +214,6 @@
             // 
             this.gbBasicf.Controls.Add(this.btnAfkOff);
             this.gbBasicf.Controls.Add(this.btnAfkOn);
-            this.gbBasicf.Controls.Add(this.btnAutoExuraOff);
-            this.gbBasicf.Controls.Add(this.btnAutoExuraOn);
             this.gbBasicf.Controls.Add(this.btnBlackSkull);
             this.gbBasicf.Controls.Add(this.chkAfk);
             this.gbBasicf.Controls.Add(this.chkEsconderArvores);
@@ -219,7 +221,6 @@
             this.gbBasicf.Controls.Add(this.chkLuzTotal);
             this.gbBasicf.Controls.Add(this.btnOutfitDeamon);
             this.gbBasicf.Controls.Add(this.btnOutfitWizard);
-            this.gbBasicf.Controls.Add(this.btnComerCarne);
             this.gbBasicf.Controls.Add(this.btnEnviarMenssagem);
             this.gbBasicf.Controls.Add(this.btnVirarBaixo);
             this.gbBasicf.Controls.Add(this.btnAndarCima);
@@ -234,29 +235,29 @@
             this.gbBasicf.Text = "Basico";
             this.gbBasicf.Enter += new System.EventHandler(this.gbBasicf_Enter);
             // 
-            // btnAutoExuraOff
+            // btnAfkOff
             // 
-            this.btnAutoExuraOff.Location = new System.Drawing.Point(108, 110);
-            this.btnAutoExuraOff.Name = "btnAutoExuraOff";
-            this.btnAutoExuraOff.Size = new System.Drawing.Size(104, 23);
-            this.btnAutoExuraOff.TabIndex = 15;
-            this.btnAutoExuraOff.Text = "Auto Exura Off";
-            this.btnAutoExuraOff.UseVisualStyleBackColor = true;
-            this.btnAutoExuraOff.Click += new System.EventHandler(this.btnAutoExuraOff_Click);
+            this.btnAfkOff.Location = new System.Drawing.Point(108, 132);
+            this.btnAfkOff.Name = "btnAfkOff";
+            this.btnAfkOff.Size = new System.Drawing.Size(104, 23);
+            this.btnAfkOff.TabIndex = 17;
+            this.btnAfkOff.Text = "Afk Off";
+            this.btnAfkOff.UseVisualStyleBackColor = true;
+            this.btnAfkOff.Click += new System.EventHandler(this.btnAfkOff_Click);
             // 
-            // btnAutoExuraOn
+            // btnAfkOn
             // 
-            this.btnAutoExuraOn.Location = new System.Drawing.Point(108, 86);
-            this.btnAutoExuraOn.Name = "btnAutoExuraOn";
-            this.btnAutoExuraOn.Size = new System.Drawing.Size(104, 23);
-            this.btnAutoExuraOn.TabIndex = 14;
-            this.btnAutoExuraOn.Text = "Auto Exura On";
-            this.btnAutoExuraOn.UseVisualStyleBackColor = true;
-            this.btnAutoExuraOn.Click += new System.EventHandler(this.btnAutoExuraOn_Click);
+            this.btnAfkOn.Location = new System.Drawing.Point(108, 103);
+            this.btnAfkOn.Name = "btnAfkOn";
+            this.btnAfkOn.Size = new System.Drawing.Size(104, 23);
+            this.btnAfkOn.TabIndex = 16;
+            this.btnAfkOn.Text = "Afk On";
+            this.btnAfkOn.UseVisualStyleBackColor = true;
+            this.btnAfkOn.Click += new System.EventHandler(this.btnAfkOn_Click);
             // 
             // btnBlackSkull
             // 
-            this.btnBlackSkull.Location = new System.Drawing.Point(108, 62);
+            this.btnBlackSkull.Location = new System.Drawing.Point(108, 74);
             this.btnBlackSkull.Name = "btnBlackSkull";
             this.btnBlackSkull.Size = new System.Drawing.Size(104, 23);
             this.btnBlackSkull.TabIndex = 13;
@@ -310,7 +311,7 @@
             // 
             // btnOutfitDeamon
             // 
-            this.btnOutfitDeamon.Location = new System.Drawing.Point(108, 38);
+            this.btnOutfitDeamon.Location = new System.Drawing.Point(108, 45);
             this.btnOutfitDeamon.Name = "btnOutfitDeamon";
             this.btnOutfitDeamon.Size = new System.Drawing.Size(104, 23);
             this.btnOutfitDeamon.TabIndex = 8;
@@ -320,7 +321,7 @@
             // 
             // btnOutfitWizard
             // 
-            this.btnOutfitWizard.Location = new System.Drawing.Point(108, 14);
+            this.btnOutfitWizard.Location = new System.Drawing.Point(108, 16);
             this.btnOutfitWizard.Name = "btnOutfitWizard";
             this.btnOutfitWizard.Size = new System.Drawing.Size(104, 23);
             this.btnOutfitWizard.TabIndex = 7;
@@ -328,19 +329,9 @@
             this.btnOutfitWizard.UseVisualStyleBackColor = true;
             this.btnOutfitWizard.Click += new System.EventHandler(this.btnMudarOutfit_Click);
             // 
-            // btnComerCarne
-            // 
-            this.btnComerCarne.Location = new System.Drawing.Point(3, 158);
-            this.btnComerCarne.Name = "btnComerCarne";
-            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
-            this.btnComerCarne.TabIndex = 6;
-            this.btnComerCarne.Text = "Comer Queijo";
-            this.btnComerCarne.UseVisualStyleBackColor = true;
-            this.btnComerCarne.Click += new System.EventHandler(this.btnComerCarne_Click);
-            // 
             // btnEnviarMenssagem
             // 
-            this.btnEnviarMenssagem.Location = new System.Drawing.Point(3, 134);
+            this.btnEnviarMenssagem.Location = new System.Drawing.Point(3, 161);
             this.btnEnviarMenssagem.Name = "btnEnviarMenssagem";
             this.btnEnviarMenssagem.Size = new System.Drawing.Size(104, 23);
             this.btnEnviarMenssagem.TabIndex = 5;
@@ -350,7 +341,7 @@
             // 
             // btnVirarBaixo
             // 
-            this.btnVirarBaixo.Location = new System.Drawing.Point(3, 110);
+            this.btnVirarBaixo.Location = new System.Drawing.Point(3, 132);
             this.btnVirarBaixo.Name = "btnVirarBaixo";
             this.btnVirarBaixo.Size = new System.Drawing.Size(104, 23);
             this.btnVirarBaixo.TabIndex = 4;
@@ -360,7 +351,7 @@
             // 
             // btnAndarCima
             // 
-            this.btnAndarCima.Location = new System.Drawing.Point(3, 86);
+            this.btnAndarCima.Location = new System.Drawing.Point(3, 103);
             this.btnAndarCima.Name = "btnAndarCima";
             this.btnAndarCima.Size = new System.Drawing.Size(104, 23);
             this.btnAndarCima.TabIndex = 3;
@@ -370,7 +361,7 @@
             // 
             // btnEspiarClear
             // 
-            this.btnEspiarClear.Location = new System.Drawing.Point(3, 62);
+            this.btnEspiarClear.Location = new System.Drawing.Point(3, 74);
             this.btnEspiarClear.Name = "btnEspiarClear";
             this.btnEspiarClear.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarClear.TabIndex = 2;
@@ -380,7 +371,7 @@
             // 
             // btnEspiarBaixo
             // 
-            this.btnEspiarBaixo.Location = new System.Drawing.Point(3, 38);
+            this.btnEspiarBaixo.Location = new System.Drawing.Point(3, 45);
             this.btnEspiarBaixo.Name = "btnEspiarBaixo";
             this.btnEspiarBaixo.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarBaixo.TabIndex = 1;
@@ -390,7 +381,7 @@
             // 
             // btnEspiarCima
             // 
-            this.btnEspiarCima.Location = new System.Drawing.Point(3, 14);
+            this.btnEspiarCima.Location = new System.Drawing.Point(3, 16);
             this.btnEspiarCima.Name = "btnEspiarCima";
             this.btnEspiarCima.Size = new System.Drawing.Size(104, 23);
             this.btnEspiarCima.TabIndex = 0;
@@ -417,30 +408,37 @@
             this.tmrExura.Interval = 200;
             this.tmrExura.Tick += new System.EventHandler(this.tmrExura_Tick);
             // 
-            // btnAfkOff
-            // 
-            this.btnAfkOff.Location = new System.Drawing.Point(108, 158);
-            this.btnAfkOff.Name = "btnAfkOff";
-            this.btnAfkOff.Size = new System.Drawing.Size(104, 23);
-            this.btnAfkOff.TabIndex = 17;
-            this.btnAfkOff.Text = "Afk Off";
-            this.btnAfkOff.UseVisualStyleBackColor = true;
-            this.btnAfkOff.Click += new System.EventHandler(this.btnAfkOff_Click);
-            // 
-            // btnAfkOn
-            // 
-            this.btnAfkOn.Location = new System.Drawing.Point(108, 134);
-            this.btnAfkOn.Name = "btnAfkOn";
-            this.btnAfkOn.Size = new System.Drawing.Size(104, 23);
-            this.btnAfkOn.TabIndex = 16;
-            this.btnAfkOn.Text = "Afk On";
-            this.btnAfkOn.UseVisualStyleBackColor = true;
-            this.btnAfkOn.Click += new System.EventHandler(this.btnAfkOn_Click);
-            // 
             // tmrAfk
             // 
             this.tmrAfk.Interval = 10000;
             this.tmrAfk.Tick += new System.EventHandler(this.tmrAfk_Tick);
+            // 
+            // btnAutoExuraOff
+            // 
+            this.btnAutoExuraOff.Location = new System.Drawing.Point(6, 77);
+            this.btnAutoExuraOff.Name = "btnAutoExuraOff";
+            this.btnAutoExuraOff.Size = new System.Drawing.Size(104, 23);
+            this.btnAutoExuraOff.TabIndex = 18;
+            this.btnAutoExuraOff.Text = "Auto Exura Off";
+            this.btnAutoExuraOff.UseVisualStyleBackColor = true;
+            // 
+            // btnAutoExuraOn
+            // 
+            this.btnAutoExuraOn.Location = new System.Drawing.Point(6, 48);
+            this.btnAutoExuraOn.Name = "btnAutoExuraOn";
+            this.btnAutoExuraOn.Size = new System.Drawing.Size(104, 23);
+            this.btnAutoExuraOn.TabIndex = 17;
+            this.btnAutoExuraOn.Text = "Auto Exura On";
+            this.btnAutoExuraOn.UseVisualStyleBackColor = true;
+            // 
+            // btnComerCarne
+            // 
+            this.btnComerCarne.Location = new System.Drawing.Point(6, 19);
+            this.btnComerCarne.Name = "btnComerCarne";
+            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
+            this.btnComerCarne.TabIndex = 16;
+            this.btnComerCarne.Text = "Comer Queijo";
+            this.btnComerCarne.UseVisualStyleBackColor = true;
             // 
             // mBot
             // 
@@ -459,6 +457,7 @@
             this.tabTrainer.ResumeLayout(false);
             this.tabMana.ResumeLayout(false);
             this.tabHeal.ResumeLayout(false);
+            this.gbHeal.ResumeLayout(false);
             this.tabBasics.ResumeLayout(false);
             this.gbBasicf.ResumeLayout(false);
             this.gbBasicf.PerformLayout();
@@ -489,7 +488,6 @@
         private System.Windows.Forms.Button btnVirarBaixo;
         private System.Windows.Forms.Button btnAndarCima;
         private System.Windows.Forms.Button btnEnviarMenssagem;
-        private System.Windows.Forms.Button btnComerCarne;
         private System.Windows.Forms.Button btnOutfitWizard;
         private System.Windows.Forms.Button btnOutfitDeamon;
         private System.Windows.Forms.CheckBox chkLuzTotal;
@@ -497,12 +495,13 @@
         private System.Windows.Forms.CheckBox chkEsconderArvores;
         private System.Windows.Forms.CheckBox chkAfk;
         private System.Windows.Forms.Button btnBlackSkull;
-        private System.Windows.Forms.Button btnAutoExuraOff;
-        private System.Windows.Forms.Button btnAutoExuraOn;
         private System.Windows.Forms.Timer tmrExura;
         private System.Windows.Forms.Button btnAfkOff;
         private System.Windows.Forms.Button btnAfkOn;
         private System.Windows.Forms.Timer tmrAfk;
+        private System.Windows.Forms.Button btnAutoExuraOff;
+        private System.Windows.Forms.Button btnAutoExuraOn;
+        private System.Windows.Forms.Button btnComerCarne;
     }
 }
 
