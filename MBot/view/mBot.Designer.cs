@@ -40,10 +40,11 @@
             this.gbMana = new System.Windows.Forms.GroupBox();
             this.tabHeal = new System.Windows.Forms.TabPage();
             this.gbHeal = new System.Windows.Forms.GroupBox();
+            this.btnAutoExuraOff = new System.Windows.Forms.Button();
+            this.btnAutoExuraOn = new System.Windows.Forms.Button();
+            this.btnComerCarne = new System.Windows.Forms.Button();
             this.tabBasics = new System.Windows.Forms.TabPage();
             this.gbBasicf = new System.Windows.Forms.GroupBox();
-            this.btnAfkOff = new System.Windows.Forms.Button();
-            this.btnAfkOn = new System.Windows.Forms.Button();
             this.btnBlackSkull = new System.Windows.Forms.Button();
             this.chkAfk = new System.Windows.Forms.CheckBox();
             this.chkEsconderArvores = new System.Windows.Forms.CheckBox();
@@ -60,9 +61,6 @@
             this.tabSelect = new System.Windows.Forms.TabControl();
             this.tmrExura = new System.Windows.Forms.Timer(this.components);
             this.tmrAfk = new System.Windows.Forms.Timer(this.components);
-            this.btnAutoExuraOff = new System.Windows.Forms.Button();
-            this.btnAutoExuraOn = new System.Windows.Forms.Button();
-            this.btnComerCarne = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabTrainer.SuspendLayout();
             this.tabMana.SuspendLayout();
@@ -127,7 +125,7 @@
             // 
             this.btnBasico.Image = global::MBot.Properties.Resources.img_basics;
             this.btnBasico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBasico.Location = new System.Drawing.Point(5, 17);
+            this.btnBasico.Location = new System.Drawing.Point(5, 18);
             this.btnBasico.Name = "btnBasico";
             this.btnBasico.Size = new System.Drawing.Size(85, 50);
             this.btnBasico.TabIndex = 0;
@@ -199,6 +197,33 @@
             this.gbHeal.TabStop = false;
             this.gbHeal.Text = "Restaurar Vida";
             // 
+            // btnAutoExuraOff
+            // 
+            this.btnAutoExuraOff.Location = new System.Drawing.Point(6, 77);
+            this.btnAutoExuraOff.Name = "btnAutoExuraOff";
+            this.btnAutoExuraOff.Size = new System.Drawing.Size(104, 23);
+            this.btnAutoExuraOff.TabIndex = 18;
+            this.btnAutoExuraOff.Text = "Auto Exura Off";
+            this.btnAutoExuraOff.UseVisualStyleBackColor = true;
+            // 
+            // btnAutoExuraOn
+            // 
+            this.btnAutoExuraOn.Location = new System.Drawing.Point(6, 48);
+            this.btnAutoExuraOn.Name = "btnAutoExuraOn";
+            this.btnAutoExuraOn.Size = new System.Drawing.Size(104, 23);
+            this.btnAutoExuraOn.TabIndex = 17;
+            this.btnAutoExuraOn.Text = "Auto Exura On";
+            this.btnAutoExuraOn.UseVisualStyleBackColor = true;
+            // 
+            // btnComerCarne
+            // 
+            this.btnComerCarne.Location = new System.Drawing.Point(6, 19);
+            this.btnComerCarne.Name = "btnComerCarne";
+            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
+            this.btnComerCarne.TabIndex = 16;
+            this.btnComerCarne.Text = "Comer Queijo";
+            this.btnComerCarne.UseVisualStyleBackColor = true;
+            // 
             // tabBasics
             // 
             this.tabBasics.Controls.Add(this.gbBasicf);
@@ -212,8 +237,6 @@
             // 
             // gbBasicf
             // 
-            this.gbBasicf.Controls.Add(this.btnAfkOff);
-            this.gbBasicf.Controls.Add(this.btnAfkOn);
             this.gbBasicf.Controls.Add(this.btnBlackSkull);
             this.gbBasicf.Controls.Add(this.chkAfk);
             this.gbBasicf.Controls.Add(this.chkEsconderArvores);
@@ -234,26 +257,6 @@
             this.gbBasicf.TabStop = false;
             this.gbBasicf.Text = "Basico";
             this.gbBasicf.Enter += new System.EventHandler(this.gbBasicf_Enter);
-            // 
-            // btnAfkOff
-            // 
-            this.btnAfkOff.Location = new System.Drawing.Point(108, 132);
-            this.btnAfkOff.Name = "btnAfkOff";
-            this.btnAfkOff.Size = new System.Drawing.Size(104, 23);
-            this.btnAfkOff.TabIndex = 17;
-            this.btnAfkOff.Text = "Afk Off";
-            this.btnAfkOff.UseVisualStyleBackColor = true;
-            this.btnAfkOff.Click += new System.EventHandler(this.btnAfkOff_Click);
-            // 
-            // btnAfkOn
-            // 
-            this.btnAfkOn.Location = new System.Drawing.Point(108, 103);
-            this.btnAfkOn.Name = "btnAfkOn";
-            this.btnAfkOn.Size = new System.Drawing.Size(104, 23);
-            this.btnAfkOn.TabIndex = 16;
-            this.btnAfkOn.Text = "Afk On";
-            this.btnAfkOn.UseVisualStyleBackColor = true;
-            this.btnAfkOn.Click += new System.EventHandler(this.btnAfkOn_Click);
             // 
             // btnBlackSkull
             // 
@@ -413,33 +416,6 @@
             this.tmrAfk.Interval = 10000;
             this.tmrAfk.Tick += new System.EventHandler(this.tmrAfk_Tick);
             // 
-            // btnAutoExuraOff
-            // 
-            this.btnAutoExuraOff.Location = new System.Drawing.Point(6, 77);
-            this.btnAutoExuraOff.Name = "btnAutoExuraOff";
-            this.btnAutoExuraOff.Size = new System.Drawing.Size(104, 23);
-            this.btnAutoExuraOff.TabIndex = 18;
-            this.btnAutoExuraOff.Text = "Auto Exura Off";
-            this.btnAutoExuraOff.UseVisualStyleBackColor = true;
-            // 
-            // btnAutoExuraOn
-            // 
-            this.btnAutoExuraOn.Location = new System.Drawing.Point(6, 48);
-            this.btnAutoExuraOn.Name = "btnAutoExuraOn";
-            this.btnAutoExuraOn.Size = new System.Drawing.Size(104, 23);
-            this.btnAutoExuraOn.TabIndex = 17;
-            this.btnAutoExuraOn.Text = "Auto Exura On";
-            this.btnAutoExuraOn.UseVisualStyleBackColor = true;
-            // 
-            // btnComerCarne
-            // 
-            this.btnComerCarne.Location = new System.Drawing.Point(6, 19);
-            this.btnComerCarne.Name = "btnComerCarne";
-            this.btnComerCarne.Size = new System.Drawing.Size(104, 23);
-            this.btnComerCarne.TabIndex = 16;
-            this.btnComerCarne.Text = "Comer Queijo";
-            this.btnComerCarne.UseVisualStyleBackColor = true;
-            // 
             // mBot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,8 +472,6 @@
         private System.Windows.Forms.CheckBox chkAfk;
         private System.Windows.Forms.Button btnBlackSkull;
         private System.Windows.Forms.Timer tmrExura;
-        private System.Windows.Forms.Button btnAfkOff;
-        private System.Windows.Forms.Button btnAfkOn;
         private System.Windows.Forms.Timer tmrAfk;
         private System.Windows.Forms.Button btnAutoExuraOff;
         private System.Windows.Forms.Button btnAutoExuraOn;

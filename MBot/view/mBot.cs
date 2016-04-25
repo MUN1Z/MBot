@@ -143,22 +143,14 @@ namespace MBot
 
         private void chkAfk_CheckedChanged(object sender, EventArgs e)
         {
-            System.Timers.Timer aTimer = new System.Timers.Timer();
-            System.Threading.Thread.Sleep(5000);
-
-            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            // Set the Interval to 5 minutos.
-            aTimer.Interval = 1000;
-
+           
              if (chkAfk.Checked == true) {
 
-                aTimer.Enabled = true;
+                 tmrAfk.Start();
 
             }else{
 
-                aTimer.Enabled = false;
-
-                player.Turn(Direction.Right);
+                tmrAfk.Stop();
 
              }
 
@@ -197,15 +189,6 @@ namespace MBot
             player.Turn(Direction.Left);
         }
 
-        private void btnAfkOn_Click(object sender, EventArgs e)
-        {
-            tmrAfk.Start();
-        }
-
-        private void btnAfkOff_Click(object sender, EventArgs e)
-        {
-            tmrAfk.Stop();
-        }
-
+       
     }
 }

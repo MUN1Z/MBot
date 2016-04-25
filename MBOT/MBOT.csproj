@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Basico.cs" />
+    <Compile Include="model\Cura.cs" />
     <Compile Include="view\mBot.cs">
       <SubType>Form</SubType>
     </Compile>
